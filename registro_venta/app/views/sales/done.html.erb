@@ -1,0 +1,21 @@
+<h1>Ventas:</h1>
+<table>
+  <th>numero</th>
+  <th>detalle</th>
+  <th>valor</th>
+  <th>% descuento</th>
+  <th>impuesto</th>
+  <th>total</th>
+  <% @sale.each do |i| %>
+  <tr>
+    <td> <%= i.id %> </td>
+    <td> <%= i.detail %> </td>
+    <td> <%= i.value %> </td>
+    <td> <%= i.discount %> </td>
+    <td> <%= i.tax %> </td>
+    <td> <%= i.total %> </td>
+    <% end %>
+  </tr>
+</table>
+
+<%= link_to 'Volver', sales_new_path %>
